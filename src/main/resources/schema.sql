@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS soaps (
+    id  IDENTITY NOT NULL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description VARCHAR,
+    price INTEGER
+);
+CREATE TABLE IF NOT EXISTS seconds (
+    id  IDENTITY NOT NULL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description VARCHAR,
+    price INTEGER
+);
+CREATE TABLE IF NOT EXISTS salats (
+    id  IDENTITY NOT NULL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description VARCHAR,
+    price INTEGER
+);
+CREATE TABLE IF NOT EXISTS bakers (
+    id  IDENTITY NOT NULL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    description VARCHAR,
+    price INTEGER
+);

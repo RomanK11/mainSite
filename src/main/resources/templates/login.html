@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <section>
+        <form method="post" th:object="${user}">
+            <h1>Вход</h1>
+
+            <label for="username">Имя пользователя</label>
+            <input type="text" placeholder="Введите имя пользователя" id="username" required th:field="*{username}">
+
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль" id="password" required th:field="*{password}">
+            <button type="submit">Войти</button>
+        </form>
+   </section>
+</body>
+</html>

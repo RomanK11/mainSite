@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+        <form method="post" th:object="${user}">
+            <h1>Регистрация</h1>
+
+            <label for="username">Имя пользователя</label>
+            <input type="text" placeholder="Введите имя пользователя" id="username" required th:field="*{username}">
+
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль" id="password" required th:field="*{password}">
+
+            <label for="confirm_password">Подтверждение пароля</label>
+            <input type="password" placeholder="Подтвердите пароль" id="confirm_password" required>
+
+            <button type="submit">Создать аккаунт</button>
+
+        </form>
+    </div>
+    </section>
+    <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" th:object="${baker}">
+        <h1>Добавить Салат</h1>
+
+        <label for="title">Название салата</label>
+        <input type="text" placeholder="Название" required th:field="*{title}">
+
+        <label for="description">Описание</label>
+        <input placeholder="Введите описание" required th:field="*{description}">
+
+        <label for="price">Стоимость</label>
+        <input placeholder="Введите стоимость" required th:field="*{price}">
+
+        <button type="submit">Добавить</button>
+
+    </form>
+</body>
+</html>

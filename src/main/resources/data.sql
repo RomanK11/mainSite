@@ -13,3 +13,6 @@ VALUES  ('Торт', 'сладкий', 120),
 INSERT INTO users (username, password, role)
 VALUES  ('admin', 'admin', 'admin'),
         ('user', '1234', 'role');
+INSERT INTO comments (name, text)
+VALUES  ('Anton', 'Good'),
+        ('Andrey', 'Nice');

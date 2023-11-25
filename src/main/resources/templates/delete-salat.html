@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div th:each="salat : ${salats}">
+        <form th:method="delete" th:action="@{/menu/delete-salat/{id}(id = ${salat.id})}">
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+</body>
+</html>

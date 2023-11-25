@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Панель администрации</h1>
+        <h2>Вторые блюда</h2>
+
+        <div th:each="second : ${seconds}">
+            <a th:href="'/menu/delete-second/' + ${second.id}" th:text="удалить"></a>
+            <p th:text="'1 ' + ${second.title}"></p>
+            <p th:text="'2 ' + ${second.description}"></p>
+            <p th:text="'3 ' + ${second.price}"></p>
+            <p>_______</p>
+        </div>
+
+        <a href="/menu/addSecond">Добавить второе</a>
+        
+    </section>
+</body>
+</html>

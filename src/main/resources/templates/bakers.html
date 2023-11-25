@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Панель администрации</h1>
+        <h2>Выпечка</h2>
+
+        <div th:each="baker : ${bakers}">
+            <a th:href="'/menu/delete-baker/' + ${baker.id}" th:text="удалить"></a>
+            <p th:text="'1 ' + ${baker.title}"></p>
+            <p th:text="'2 ' + ${baker.description}"></p>
+            <p th:text="'3 ' + ${baker.price}"></p>
+            <p>_______</p>
+        </div>
+
+        <a href="/menu/addBaker">Добавить салат</a>
+        
+    </section>
+</body>
+</html>

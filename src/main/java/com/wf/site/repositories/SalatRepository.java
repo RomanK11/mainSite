@@ -10,4 +10,8 @@ import com.wf.site.models.Second;
 public interface SalatRepository extends CrudRepository<Salat, Long> {
     @Query("SELECT * FROM SALATS WHERE id = :id")
     Iterable<Salat> searchById(@Param("id") Long id);
+
+    @Query("SELECT * FROM SALATS WHERE TITLE = :title")
+    Iterable<Salat> searchSalats(@Param("title") String title);
+
 }

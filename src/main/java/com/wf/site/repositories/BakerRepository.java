@@ -12,4 +12,6 @@ public interface BakerRepository extends CrudRepository<Baker, Long> {
     @Query("SELECT * FROM BAKERS WHERE id = :id")
     Iterable<Baker> searchById(@Param("id") Long id);
     
+    @Query("SELECT * FROM BAKERS WHERE TITLE = :title")
+    Iterable<Baker> searchBakers(@Param("title") String title);
 }

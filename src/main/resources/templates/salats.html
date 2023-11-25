@@ -9,6 +9,13 @@
     <section>
         <h1>Панель администрации</h1>
         <h2>Салаты</h2>
+    <div>
+        <form action="/menu/search" method="POST">
+            <label for="title">Search:</label>
+            <input type="text" name="title" id="title">
+            <button type="submit">Найти</button>
+        </form>
+    </div>
 
         <div th:each="salat : ${salats}">
             <a th:href="'/menu/delete-salat/' + ${salat.id}" th:text="удалить"></a>
